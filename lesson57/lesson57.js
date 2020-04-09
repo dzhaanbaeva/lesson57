@@ -96,7 +96,7 @@ let card = document.querySelector(".my-3");
 card.classList.remove("none");
 body.classList.remove("no-scroll");
 }
-// hideSplashScreen();
+
 
 
 showSplashScreen();
@@ -150,20 +150,16 @@ function createPostElement(post){
       const i2 = document.createElement("i");
       const i4 = document.createElement("i");
       const i5 = document.createElement("i");
-    //   i.setAttribute('class', 'fas fa-heart');
       i1.setAttribute('class', 'far fa-heart');
       i1.setAttribute('id', 'icon-');
       i2.setAttribute('class', 'far fa-comment');
       i4.setAttribute('class', 'far fa-bookmark');
-    //   i5.setAttribute('class', 'fas fa-bookmark');
       div.append(h2);
       div.append(img);
-    //   span.append(i);
       span1.append(i1);
       span2.append(i2);
       span4.append(i4);
       span5.append(i5);
-    //   div1.append(span)
       div1.append(span1)
       div1.append(span2)
       div1.append(span3)
@@ -178,10 +174,7 @@ function createPostElement(post){
       return div;
     }
    
-    // // let div = document.createElement('div');
-    // // const span = document.createElement("span");
-    // // const i = document.createElement("i");
-   
+    
     
    
 
@@ -195,7 +188,6 @@ function  addPost(postElement){
 addPost(createPostElement(post1))
 
 //-------------------Task1-------------------------------
-// const img1 = document.getElementsByTagName('img');
 const heart = document.getElementsByClassName('far fa-heart');
     for (let i=0;i<heart.length;i++) {
         heart[i].addEventListener('click', function(event) {
@@ -214,14 +206,12 @@ const heart = document.getElementsByClassName('far fa-heart');
         img2[i].addEventListener('dblclick', function(event) {
             const el = twoClick[i].classList;
             let classes = el.toggle("fas");
-            // let twClc = classes.toggle("far");
             console.log(classes)
                
     }); 
     }
 
     //----------------Task3-----------------------------
-  
     const bookmark = document.getElementsByClassName('far fa-bookmark');
     for (let i=0;i<bookmark.length;i++) {
     bookmark[i].addEventListener('click', function(event) {
@@ -231,7 +221,7 @@ const heart = document.getElementsByClassName('far fa-heart');
                
     }); 
     }
-
+    //----------------Task4-----------------------------
     const button = document.getElementsByTagName("button");
     for (let i=0;i<button.length;i++) {
     button[i].addEventListener('click', function(event){
